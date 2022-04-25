@@ -1,0 +1,62 @@
+/*
+ * Empty Stylesheet file.
+ */
+*{
+    -fx-font-family: Tahoma;
+}
+VBox{
+    -fx-background-color:lightblue;
+    -fx-padding: 10;
+    -fx-spacing: 20;
+    -fx-alignment: CENTER
+    
+}
+HBox{
+/*    -fx-spacing: 10;*/
+    -fx-alignment: CENTER;
+    
+}
+TextField.textfield{
+    -fx-pref-width: 400;
+   
+}
+Text.dangnhap{
+    -fx-font-size: 36;
+}
+Button{
+    -fx-background-color: darkblue;
+    -fx-text-fill: white;
+    -fx-pref-width: 200;
+    -fx-pref-height:50;
+    -fx-font-size: 24;
+}
+Text.welcome{
+    -fx-font-size:36;
+}
+Text.welcome1{
+    -fx-font-size: 30; 
+}
+Button.BTNQLCD{
+    -fx-background-color: darkblue;
+    -fx-text-fill: white;
+    -fx-pref-width: 100;
+    -fx-pref-height:50;
+    -fx-font-size: 15;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+Button.BTNWELCOME{
+    -fx-background-color: darkblue;
+    -fx-text-fill: white;
+    -fx-pref-width: 150;
+    -fx-pref-height:75;
+    -fx-font-size: 20;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.mainFxmlClass {
+
+}

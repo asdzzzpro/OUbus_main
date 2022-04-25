@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: orange;" stylesheets="@../../../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fxticketsale.FXMLWelcomeController">
+   <children>
+      <Text fill="#998f8f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="welcome" text="Ứng Dụng Quản Lý Vé Xe" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text fill="#315131" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="welcome1" text="Bạn Là?" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#dangnhapadmin" styleClass="BTNWELCOME" stylesheets="@../../../styles/style.css" text="Admin" />
+            <Button mnemonicParsing="false" onAction="#dangnhapnhanvien" styleClass="BTNWELCOME" text="Nhân Viên" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

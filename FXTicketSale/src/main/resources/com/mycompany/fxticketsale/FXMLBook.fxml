@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fxticketsale.FXMLBookController">
+   <children>
+      <AnchorPane layoutX="72.0" layoutY="41.0" prefHeight="333.0" prefWidth="217.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="txtTenVe" layoutX="14.0" layoutY="14.0" />
+            <TextField fx:id="txtMaChuyen" layoutX="14.0" layoutY="48.0" />
+            <TextField fx:id="txtMaGhe" layoutX="14.0" layoutY="84.0" />
+            <TextField fx:id="txtMaNV" layoutX="14.0" layoutY="118.0" />
+            <TextField fx:id="txtTenKH" layoutX="14.0" layoutY="154.0" />
+            <TextField fx:id="txtSdt" layoutX="14.0" layoutY="188.0" />
+            <DatePicker fx:id="txtNgayDat" layoutX="14.0" layoutY="224.0" />
+            <Button layoutX="14.0" layoutY="260.0" mnemonicParsing="false" onAction="#themVe" text="dat" />
+            <Button layoutX="89.0" layoutY="260.0" mnemonicParsing="false" onAction="#suaVe" text="Sua" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbcacChuyenDi" layoutX="307.0" layoutY="41.0" prefHeight="334.0" prefWidth="302.0" />
+      <TextField fx:id="txtTimKiem" layoutX="351.0" layoutY="14.0" />
+   </children>
+</AnchorPane>

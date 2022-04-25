@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="494.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fxticketsale.FXMLChinhSuaController">
+    <stylesheets>
+        <URL value="@/styles/style.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="182.0" layoutY="23.0" text="Chinh Sua Ve Xe">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMaVe" layoutX="26.0" layoutY="299.0" prefHeight="26.0" prefWidth="442.0" promptText="Dien ma ve xe can doi" />
+      <TextField fx:id="txtTenVe" layoutX="26.0" layoutY="340.0" promptText="Ten Ve" />
+      <TextField fx:id="txtMaChuyen" layoutX="26.0" layoutY="378.0" promptText="Ma Chuyen" />
+      <TextField fx:id="txtMaGhe" layoutX="26.0" layoutY="416.0" promptText="Ma Ghe" />
+      <TextField fx:id="txtMaNV" layoutX="26.0" layoutY="455.0" promptText="Ma NV" />
+      <TextField fx:id="txtTenKH" layoutX="319.0" layoutY="378.0" promptText="Ten KH" />
+      <TextField fx:id="txtSdt" layoutX="319.0" layoutY="416.0" promptText="SDT" />
+      <Button layoutX="98.0" layoutY="523.0" mnemonicParsing="false" onAction="#chinhSua" prefHeight="39.0" prefWidth="103.0" text="Sửa Vé" />
+      <DatePicker fx:id="txtNgayDat" layoutX="316.0" layoutY="454.0" prefHeight="26.0" prefWidth="150.0" promptText="Ngay Dat" />
+      <Label layoutX="36.0" layoutY="71.0" text="Tìm Kiếm" />
+      <TextField fx:id="txtTimKiem" layoutX="98.0" layoutY="66.0" prefHeight="26.0" prefWidth="265.0" promptText="Nhập tên hoặc sđt" />
+      <TableView fx:id="tbVeXe" layoutX="26.0" layoutY="98.0" prefHeight="191.0" prefWidth="442.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="260.0" layoutY="523.0" mnemonicParsing="false" onAction="#xuatVe" prefHeight="39.0" prefWidth="103.0" text="Xuất Vé" />
+   </children>
+</AnchorPane>
