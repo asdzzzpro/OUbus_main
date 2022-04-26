@@ -38,7 +38,7 @@ public class VeXeService {
            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-//                listVX.add(new VeXe(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(6), rs.getString(7), rs.getString(8), rs.getInt(5))));
+                listVX.add(new VeXe(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(6), rs.getString(7), rs.getString(8), rs.getInt(5)));
             }
         } catch (Exception e) {
             System.out.println("Cannot Connect" + e.getMessage());
@@ -56,5 +56,21 @@ public class VeXeService {
         ps.execute();
         conn.commit();
         
+    }
+        public static void themVe(VeXe v) throws SQLException{
+        
+        String sql = "INSERT INTO vexe (tenVe,maChuyenXe,maGhe,maNV,tenKH,sdtKH,ngayDatVe) values(?,?,?,?,?,?,?)";
+        Connection conn = JdbcUtils.getConn();
+            conn.setAutoCommit(false);
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, v.getTenVe());
+            ps.setString(2, v.getMaChuyenXe());
+            ps.setInt(3, v.getMaGhe());
+            ps.setInt(4, v.getMaNV());
+            ps.setString(5, v.getTenKH());
+            ps.setString(6, v.getSdtKH());
+            ps.setString(7, v.getNgayDatVe());
+            ps.executeUpdate();
+            conn.commit();
     }
 }

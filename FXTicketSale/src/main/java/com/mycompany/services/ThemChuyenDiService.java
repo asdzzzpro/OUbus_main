@@ -25,8 +25,6 @@ public class ThemChuyenDiService {
             stm1.setInt(4, q.getGiaVe());
             stm1.setString(5, q.getDiemDi());
             stm1.setString(6, q.getDiemDen());
-            
-//            stm1.executeUpdate();
              stm1.executeUpdate();
             
             conn.commit();

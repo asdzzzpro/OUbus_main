@@ -50,10 +50,6 @@ public class FXMLWelcomeController implements Initializable {
             Logger.getLogger(FXMLWelcomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-            
-    
-  
     /**
      * Initializes the controller class.
      */

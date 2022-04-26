@@ -125,8 +125,7 @@ public class FXMLAdminController implements Initializable {
         } catch (SQLException ex) {
             System.out.println(ex.toString());
             Utils.getBox("Cập nhật thất bại!", Alert.AlertType.WARNING).show();
-        }    
-             
+        }        
     }
     
     
@@ -135,30 +134,24 @@ public class FXMLAdminController implements Initializable {
         
             TableColumn colMaChuyenXe = new TableColumn("Mã Chuyến Đi");
             colMaChuyenXe.setCellValueFactory(new PropertyValueFactory("maChuyenXe"));
-            colMaChuyenXe.setPrefWidth(80);
             
             TableColumn colMaXe = new TableColumn("Mã Xe");
             colMaXe.setCellValueFactory(new PropertyValueFactory("maXe"));
-            colMaXe.setPrefWidth(80);
+
             
             TableColumn colNgayXuatPhat = new TableColumn("Ngày Xuất Phát");
             colNgayXuatPhat.setCellValueFactory(new PropertyValueFactory("ngayXuatPhat"));
-            colNgayXuatPhat.setPrefWidth(80);
             
             TableColumn colGiaVe = new TableColumn("Giá Vé");
             colGiaVe.setCellValueFactory(new PropertyValueFactory("giaVe"));
-            colGiaVe.setPrefWidth(80);
             
             TableColumn colDiemDi = new TableColumn("Điểm Đi");
             colDiemDi.setCellValueFactory(new PropertyValueFactory("diemDi"));
-            colDiemDi.setPrefWidth(80);
 
             TableColumn colDiemDen = new TableColumn("Điểm Đến");
             colDiemDen.setCellValueFactory(new PropertyValueFactory("diemDen"));
-            colDiemDen.setPrefWidth(80);
             
             TableColumn coldelete = new TableColumn();
-            coldelete.setPrefWidth(80);
             coldelete.setCellFactory(p -> {
                 
                 Button btn = new Button("Xóa");
@@ -179,8 +172,6 @@ public class FXMLAdminController implements Initializable {
                                 ChuyenDiService.getAlertInfo("Xóa Chuyến Đi Thất Bại  " +ex.getMessage(), Alert.AlertType.INFORMATION).show();
                                
                            }
-                       
-                       
                        }
                     });
                     
@@ -208,8 +199,7 @@ public class FXMLAdminController implements Initializable {
         } catch (SQLException ex) {
             Logger.getLogger(FXMLAdminController.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    
+    }   
      public void  reload(ActionEvent event) throws SQLException{
          this.loadTableData();
      }

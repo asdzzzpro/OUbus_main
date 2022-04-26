@@ -178,36 +178,9 @@ public class FXMLChinhSuaController implements Initializable {
             TableCell cell = new TableCell();
             cell.setGraphic(btn);
             return cell;
-        });
-        
-//        TableColumn col8 = new TableColumn();
-//        col8.setCellFactory(p -> {
-//            Button btn1 = new Button("Xuat");
-//            
-//            return null;
-//        });
-        //        this.btnUpdate.setVisible(false);
-//             // Select row on Tableview
-//        this.tbdepartm.setRowFactory(et -> {
-//            TableRow row = new TableRow();
-//            row.setOnMouseClicked(r -> {
-//                this.btnUpdate. setVisible(true);
-//                Department d = (Department) this.tbdepartm.getSelectionModel().getSelectedItem();
-//                 this.txtid.setText(String.valueOf(d.getId()));
-//                 this.txtname.setText(String.valueOf(d.getName()));
-//                 this.txtaddress.setText(String.valueOf(d.getAddress()));
-//                 this.txtphone.setText(String.valueOf(d.getPhone()));
-//            });
-//        return row;
-//        });
-        
-
-               
-        this.tbVeXe.getColumns().addAll(colId, col1, col2, col3, col4, col5, col6, col7);
-        
-        
+        });           
+        this.tbVeXe.getColumns().addAll(colId, col1, col2, col3, col4, col5, col6, col7);     
     }
-    
     public void loadData(String kw) throws SQLException{
         VeXeService s = new VeXeService();
         this.tbVeXe.setItems(FXCollections.observableList(s.getListVeXe(kw)));

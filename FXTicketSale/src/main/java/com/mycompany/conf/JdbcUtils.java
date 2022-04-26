@@ -27,6 +27,6 @@ public class JdbcUtils {
      * @return the conn
      */
     public static Connection getConn() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost/oubus","root", "123456789");
+        return DriverManager.getConnection("jdbc:mysql://localhost/oubusmain","root", "12052001Li");
     }
 }

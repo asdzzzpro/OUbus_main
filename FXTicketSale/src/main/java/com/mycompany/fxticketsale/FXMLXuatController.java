@@ -66,7 +66,7 @@ public class FXMLXuatController implements Initializable {
     }    
     public void xuatVe(int kw) throws SQLException{
         Connection conn = JdbcUtils.getConn();
-        String sql2 = "SELECT diemDi,diemDen,ngayDatVe,ngayXuatPhat,tenGhe,giaVe,tenKH,sdtKH,tenNV from oubus.vexe "
+        String sql2 = "SELECT diemDi,diemDen,ngayDatVe,ngayXuatPhat,tenGhe,giaVe,tenKH,sdtKH,tenNV from oubusmain.vexe "
                 + "join chuyenxe on vexe.maChuyenXe=chuyenxe.maChuyenXe\n" +
                     "join nhanvien on vexe.maNV=nhanvien.maNV\n" +
                     "join ghe on vexe.maGhe=ghe.maGhe where maVe=?";
@@ -92,7 +92,7 @@ public class FXMLXuatController implements Initializable {
     }
     public void banVe(ActionEvent event) throws SQLException{
         try (Connection conn = JdbcUtils.getConn()){
-            PreparedStatement ps = conn.prepareStatement("UPDATE oubus.vexe SET tinhTrangVe='đã bán' WHERE maVe=?");
+            PreparedStatement ps = conn.prepareStatement("UPDATE oubusmain.vexe SET tinhTrangVe='đã bán' WHERE maVe=?");
             
             ps.setInt(1, id);
             
